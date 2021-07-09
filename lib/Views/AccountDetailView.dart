@@ -24,7 +24,7 @@ class _AccountDetailViewState extends State<AccountDetailView> {
     ];
 
     var actions = [
-      TransferItem("CVV dinámico", "Genera un codigo de seguridad temporal",
+      TransferItem("CVV dinámico", "Genera un código de seguridad temporal",
           Icons.credit_card_outlined, "cvv"),
       TransferItem("Estado de cuenta", "Consulta tus estados de cuenta",
           Icons.paid_outlined, ""),
