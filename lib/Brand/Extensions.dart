@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 extension BrandColors on Color {
   static Color get primaryColor {
-    return Color(0xFFF74B76);
+    return Color(0xFFD5252B);
   }
 
   static Color get accentColor {

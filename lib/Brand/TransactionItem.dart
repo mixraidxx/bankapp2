@@ -57,7 +57,7 @@ class TransacctionItem extends StatelessWidget {
                     "\$$amount",
                     style: TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.normal,
                         fontSize: 16),
                   )
                 ],

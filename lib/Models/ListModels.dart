@@ -8,3 +8,11 @@ class TransferItem {
 
   TransferItem(this.title, this.subtitle, this.icon, this.detailRouteName);
 }
+
+class ItemListModel {
+  final IconData icon;
+  final String title;
+  final String subtittle;
+
+  ItemListModel(this.icon, this.title, this.subtittle);
+}

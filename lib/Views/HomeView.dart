@@ -21,7 +21,7 @@ class HomeView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("David Enriquez Solis",
+              Text("David Enríquez",
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold)),
               Container(
@@ -56,13 +56,10 @@ class HomeView extends StatelessWidget {
                         width: double.infinity,
                         margin: EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                                colors: [Color(0xFFBA8BBB), Color(0xFFFD8B67)],
-                                begin: Alignment.bottomLeft,
-                                end: Alignment.topRight),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(8),
-                            )),
+                          image: DecorationImage(
+                              image: ExactAssetImage("assets/clasica.png"),
+                              fit: BoxFit.fill),
+                        ),
                         child: Padding(
                           padding: const EdgeInsets.all(16.0),
                           child: Column(
@@ -73,19 +70,25 @@ class HomeView extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(
-                                      "\$12,525",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        "\$12,525.00",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w800),
+                                      ),
                                     ),
-                                    Text(
-                                      "VISA",
-                                      style: TextStyle(
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        "03/24",
+                                        style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
+                                          fontSize: 16,
+                                        ),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -96,17 +99,15 @@ class HomeView extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(
-                                      "1234 **** **** 4321",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 12,
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        "1234 **** **** 4321",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 16,
+                                        ),
                                       ),
-                                    ),
-                                    Text(
-                                      "03/24",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 12),
                                     ),
                                   ],
                                 ),
@@ -123,7 +124,7 @@ class HomeView extends StatelessWidget {
               Padding(
                 padding:
                     const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
-                child: Text("Ultimos movimientos",
+                child: Text("Últimos movimientos",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 20,

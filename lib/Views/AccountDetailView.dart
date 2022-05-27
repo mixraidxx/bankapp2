@@ -72,7 +72,7 @@ class _AccountDetailViewState extends State<AccountDetailView> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "\$12,525",
+                                    "\$12,525.00",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 20,
@@ -140,7 +140,7 @@ class _AccountDetailViewState extends State<AccountDetailView> {
               Padding(
                 padding:
                     const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
-                child: Text("Ultimos movimientos",
+                child: Text("Últimos movimientos",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 20,

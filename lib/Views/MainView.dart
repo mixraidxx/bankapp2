@@ -1,6 +1,10 @@
 import 'package:bankapp2/Brand/Extensions.dart';
 import 'package:bankapp2/Views/HomeView.dart';
+import 'package:bankapp2/Views/PromotionsView.dart';
 import 'package:flutter/material.dart';
+
+import 'OptionsView.dart';
+import 'TransferView.dart';
 
 class MainView extends StatefulWidget {
   static const routeName = "/main";
@@ -14,15 +18,9 @@ class _MainViewState extends State<MainView> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     HomeView(),
-    Container(
-      color: Colors.blue,
-    ),
-    Container(
-      color: Colors.amber,
-    ),
-    Container(
-      color: Colors.red,
-    ),
+    TransferView(),
+    PromotionsView(),
+    OptionsView(),
   ];
 
   @override
@@ -31,7 +29,7 @@ class _MainViewState extends State<MainView> {
       body: _children[_currentIndex],
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-            color: BrandColors.backgroundColorVariant,
+            color: Colors.white,
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(32), topRight: Radius.circular(32))),
         child: SafeArea(
@@ -39,7 +37,7 @@ class _MainViewState extends State<MainView> {
             height: 55,
             width: double.infinity,
             decoration: BoxDecoration(
-                color: BrandColors.backgroundColorVariant2,
+                color: Colors.white,
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(32),
                     topRight: Radius.circular(32))),
@@ -58,7 +56,9 @@ class _MainViewState extends State<MainView> {
                       icon: Icon(
                         Icons.home_outlined,
                         size: 35,
-                        color: _currentIndex == 0 ? Colors.black : Colors.grey,
+                        color: _currentIndex == 0
+                            ? BrandColors.primaryColor
+                            : Colors.grey,
                       )),
                   IconButton(
                       onPressed: () {
@@ -68,8 +68,9 @@ class _MainViewState extends State<MainView> {
                       },
                       icon: Icon(Icons.payment,
                           size: 35,
-                          color:
-                              _currentIndex == 1 ? Colors.black : Colors.grey)),
+                          color: _currentIndex == 1
+                              ? BrandColors.primaryColor
+                              : Colors.grey)),
                   IconButton(
                       onPressed: () {
                         setState(() {
@@ -78,8 +79,9 @@ class _MainViewState extends State<MainView> {
                       },
                       icon: Icon(Icons.list_outlined,
                           size: 35,
-                          color:
-                              _currentIndex == 2 ? Colors.black : Colors.grey)),
+                          color: _currentIndex == 2
+                              ? BrandColors.primaryColor
+                              : Colors.grey)),
                   IconButton(
                       onPressed: () {
                         setState(() {
@@ -88,8 +90,9 @@ class _MainViewState extends State<MainView> {
                       },
                       icon: Icon(Icons.settings_outlined,
                           size: 35,
-                          color:
-                              _currentIndex == 3 ? Colors.black : Colors.grey))
+                          color: _currentIndex == 3
+                              ? BrandColors.primaryColor
+                              : Colors.grey))
                 ],
               ),
             ),
